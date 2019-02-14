@@ -11,7 +11,13 @@ print "There are ", nfiles, " files"
 
 # Submit each job using sbatch
 
-for jobfile in jobfilelist:
+#for jobfile in jobfilelist:
+
+nmin = 51
+nmax = 100
+
+for i in range(nmax):
+	jobfile = jobfilelist[i]
 
 	command = "sbatch "+jobfile
 

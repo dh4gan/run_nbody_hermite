@@ -25,7 +25,7 @@ for directory in directorylist:
 		command = "sbatch "+jobfile
 
 		print command
-	#	system(command)
+		system(command)
 
 
 

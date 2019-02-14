@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# read in list of directories from file and execute a python script in each
+
+while read F  ; do
+#    echo $F
+    cd $F && python ~/code/python/run_nbody_hermite/create_jobscripts.py && cd ../
+done < directorylist
+
+#for x in {11..800}; do
+#    cd runs/trace_$x && sbatch submit_loop.bsh && cd ../..
+#done
